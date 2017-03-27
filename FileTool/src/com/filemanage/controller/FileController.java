@@ -36,7 +36,7 @@ public class FileController {
         return fileService.uploadFile(file,metaData);
     }
 	
-	//------------------- Get FileEntries --------------------------------------------------------
+	//------------------- Get FileEntry --------------------------------------------------------
 	@RequestMapping(value = "/{keyword}", method = RequestMethod.GET, produces = "application/json")
     public List<FileEntry> findMeta(@PathVariable String keyword){
         LOG.info("Searching by keyword: " + keyword);
@@ -55,4 +55,5 @@ public class FileController {
 		return fileService.findById(id);
 	}
 	*/
+	
 }

@@ -9,7 +9,7 @@ public interface FileService {
 	FileEntry uploadFile(MultipartFile file, FileEntry metaData);
 
     List<FileEntry> searchFile(String keyword);
-    /*
+    
     FileEntry findById(long id);
-    */
+    
 }

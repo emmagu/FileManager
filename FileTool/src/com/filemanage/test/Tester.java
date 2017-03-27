@@ -12,15 +12,15 @@ public class Tester {
 	@Test
 	public void test(){
 	    String url = "http://127.0.0.1:8080/file";
-	    String filePath = "/Users/Jennifer/Desktop/coreJavaConcept.pdf";  
+	    String filePath = "/Users/Jennifer/Desktop/Resume_Emma Gu.doc";  
 	    RestTemplate rest = new RestTemplate();  
 	 
 	    FileSystemResource resource = new FileSystemResource(new File(filePath));  
-	    MultiValueMap<String, Object> param = new LinkedMultiValueMap<>();  
-	    param.add("file", resource);  
-	    param.add("userId", "test1");
+	    MultiValueMap<String, Object> map = new LinkedMultiValueMap<>();  
+	    map.add("file", resource);  
+	    map.add("userId", "testtest");
 	  
-	    String string = rest.postForObject(url, param, String.class);  
+	    String string = rest.postForObject(url, map, String.class);  
 	    System.out.println(string);  
 	}
 }

@@ -31,13 +31,13 @@ public class FileServiceImpl implements FileService{
 	@Autowired
     private FileUpload fileUp;
 	
-	/*
+	
 	private static final AtomicLong counter = new AtomicLong();
 	private static List<FileEntry> files;
 	static{
 		files= populateDummyFiles();
 	}
-	*/
+	
 	
 	@Override
 	@Transactional
@@ -66,7 +66,7 @@ public class FileServiceImpl implements FileService{
         return metaData;
 	}
 
-	/*
+	
 	private static List<FileEntry> populateDummyFiles() {
 		// TODO Auto-generated method stub
 		List<FileEntry> files = new ArrayList<>();
@@ -74,7 +74,7 @@ public class FileServiceImpl implements FileService{
         files.add(new FileEntry(counter.incrementAndGet(), "Gu", "FINRA2", "FINRAAPP2", new Date()));
 		return files;
 	}
-	*/
+	
 
 	@Override
 	@Transactional(readOnly = true)
@@ -88,7 +88,7 @@ public class FileServiceImpl implements FileService{
         return resList;
 	}
 	
-	/*
+	
 	@Override
 	public FileEntry findById(long id) {
 		// TODO Auto-generated method stub
@@ -99,6 +99,6 @@ public class FileServiceImpl implements FileService{
 		}
 		return null;
 	}
-	*/
+	
 
 }
