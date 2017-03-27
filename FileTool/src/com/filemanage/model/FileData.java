@@ -10,6 +10,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.filemanage.entry.FileEntry;
+
 @Entity
 @Table(name="file")
 public class FileData {
@@ -30,6 +32,15 @@ public class FileData {
     @Temporal(TemporalType.TIMESTAMP)
     private Date uploadTime;
 
+    public FileData() {}
+    
+    public FileData(FileEntry file){
+    	this.docId = file.getDocId();
+    	this.fileName = file.getFileName();
+    	this.uploadTime = file.getUploadTime();
+    	this.userId = file.getUserId();
+    }
+    
     public Long getId() {
         return fileId;
     }

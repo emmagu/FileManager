@@ -6,8 +6,10 @@ import org.springframework.web.multipart.MultipartFile;
 import com.filemanage.entry.FileEntry;
 
 public interface FileService {
-	FileEntry updateFile(MultipartFile file, FileEntry metaData);
+	FileEntry uploadFile(MultipartFile file, FileEntry metaData);
 
     List<FileEntry> searchFile(String keyword);
+    /*
     FileEntry findById(long id);
+    */
 }
