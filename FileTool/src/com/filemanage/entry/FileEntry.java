@@ -1,7 +1,7 @@
 package com.filemanage.entry;
 
 import java.util.Date;
-
+//DTO
 public class FileEntry {
 	private Long fileId;
     private String userId;
